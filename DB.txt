@@ -1,8 +1,0 @@
-CREATE TABLE [dbo].[ScrumTable] (
-    [Col_id]     INT         NOT NULL,
-    [item_id]    INT         IDENTITY (1, 1) NOT NULL,
-    [item_title] TEXT        NOT NULL,
-    [item_descr] TEXT        NULL,
-    [item_color] VARCHAR (7) NOT NULL,
-    PRIMARY KEY CLUSTERED ([item_id] ASC)
-);
