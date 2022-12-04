@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrum Table</title>
+    <link rel="icon" href="~/favicon.ico" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header id="Header">
+        <nav class="navbar">
+            <a class="navbar-brand NoDrag" asp-area="" asp-page="/Index">HScokie's Scrum Table</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link NoDrag" href="https://github.com/HScokies">GitHub</a>
+                </li>
+            </ul>
+        </nav>
+        <a class="addbtn">Добавить задание</a>
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        &copy; 2022 - HScokie's ScrumTable
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/Script.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

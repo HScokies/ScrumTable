@@ -1,0 +1,94 @@
+﻿@page
+@model IndexModel
+
+<div class="section">
+    <div class="section-title">
+        <h2>Необходимо сделать</h2>
+    </div>
+    <div class="flex section-items" id="C_1">
+        @foreach (var item in Model.Items_list)
+        {
+            if (item.Col_id == 1)
+            {
+                <div id="@item.Item_id" class="item" style="border-top: 5px solid @item.Color" draggable="true">
+                    <a class="removebtn">X</a>
+                    <h3 class="item-title">@item.Title</h3>
+                    <p class="item-descr">@item.Descr</p>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">
+        <h2>В процессе</h2>
+    </div>
+    <div class="flex section-items" id="C_2">
+        @foreach (var item in Model.Items_list)
+        {
+            if (item.Col_id == 2)
+            {
+                <div id="@item.Item_id" class="item" style="border-top: 5px solid @item.Color" draggable="true">
+                    <a class="removebtn">X</a>
+                    <h3 class="item-title">@item.Title</h3>
+                    <p class="item-descr">@item.Descr</p>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">
+        <h2>Проверка</h2>
+    </div>
+    <div class="flex section-items" id="C_3">
+        @foreach (var item in Model.Items_list)
+        {
+            if (item.Col_id == 3)
+            {
+                <div id="@item.Item_id" class="item" style="border-top: 5px solid @item.Color" draggable="true">
+                    <a class="removebtn">X</a>
+                    <h3 class="item-title">@item.Title</h3>
+                    <p class="item-descr">@item.Descr</p>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">
+        <h2>Выполнено</h2>
+    </div>
+    <div class="flex section-items" id="C_4">
+        @foreach (var item in Model.Items_list)
+        {
+            if (item.Col_id == 4)
+            {
+                <div id="@item.Item_id" class="item" style="border-top: 5px solid @item.Color" draggable="true">
+                    <a class="removebtn">X</a>
+                    <h3 class="item-title">@item.Title</h3>
+                    <p class="item-descr">@item.Descr</p>
+                </div>
+            }
+        }
+    </div>
+</div>
+<dialog id="dialog">
+    <div class="flex" style="flex-direction: column; gap: 10px;">
+        <h2>Добавление нового задания</h2>
+        <label for="title">Заголовок задания</label>
+        <input type="text" name="title" id="title">
+        <label for="descr">Текст задания</label>
+        <textarea name="descr" id="descr" cols="21" rows="2"></textarea>
+        <div class="flex color">
+            <label for="clr">Цвет задания</label>
+            <input type="color" id="clr" name="clr" value="#ffffff">
+        </div>
+        <button onclick="CreateItem()">Создать</button>
+        <button class="close-btn">Закрыть</button>
+    </div>
+</dialog>
+
